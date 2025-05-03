@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# Movie Search Application 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive movie search application built with React, TypeScript, and Tailwind CSS. Search for movies, view details, and save your favorites!
 
-## Available Scripts
+## Features ✨
 
-In the project directory, you can run:
+- 🔍 Search movies with real-time results
+- 🎥 View detailed movie information
+- ⭐ Save favorite movies
+- 🌓 Dark/Light mode toggle
+- 📱 Fully responsive design
+- 🔄 Infinite scroll pagination
+- 🎯 Type filtering (Movies, Series, Episodes)
 
-### `npm start`
+## Tech Stack 🛠️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 19
+- TypeScript
+- Tailwind CSS
+- React Router
+- Axios
+- Framer Motion
+- Heroicons
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Prerequisites 📋
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation 🚀
 
-### `npm run build`
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/movie-search-app.git
+cd movie-search-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Create a `.env` file in the root directory and add your OMDB API key:
+```
+VITE_OMDB_API_KEY=your_api_key_here
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-### `npm run eject`
+The application will be available at `http://localhost:5173`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Structure 📁
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+movie-search-app/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/         # Page components
+│   ├── App.tsx        # Main application component
+│   └── index.tsx      # Entry point
+├── public/            # Static assets
+└── package.json       # Project dependencies
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deployment 🌐
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The application is deployed on Netlify. To deploy your own version:
 
-## Learn More
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Set up environment variables in Netlify:
+   - `VITE_OMDB_API_KEY`: Your OMDB API key
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing 🤝
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments 🙏
+
+- OMDB API for movie data
+- React and TypeScript communities
+- Tailwind CSS for styling
