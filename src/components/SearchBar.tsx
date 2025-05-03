@@ -16,29 +16,19 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
-  // Debounce utility function
-  const debounce = useCallback((func: Function, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function (...args: any[]) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  }, []);
-
   const debouncedSearch = useCallback(
-    debounce((searchQuery: string) => {
-      onSearch(searchQuery);
-    }, debounceTime),
-    [onSearch, debounceTime, debounce]
+    (searchQuery: string) => {
+      const timeout = setTimeout(() => {
+        onSearch(searchQuery);
+      }, debounceTime);
+      return () => clearTimeout(timeout);
+    },
+    [onSearch, debounceTime]
   );
 
   useEffect(() => {
-    debouncedSearch(query);
-    return () => {
-      if (typeof debouncedSearch === 'function' && 'cancel' in debouncedSearch) {
-        (debouncedSearch as any).cancel();
-      }
-    };
+    const cleanup = debouncedSearch(query);
+    return cleanup;
   }, [query, debouncedSearch]);
 
   const handleClear = () => {

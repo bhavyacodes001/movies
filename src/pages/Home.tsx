@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import MovieCard from '../components/MovieCard';
 import SearchBar from '../components/SearchBar';
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
     fetchNewReleases();
   }, [API_KEY]);
 
-  const searchMovies = async (page: number = 1) => {
+  const searchMovies = useCallback(async (page: number = 1) => {
     if (!searchTerm) return;
     
     setLoading(true);
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [searchTerm, type, API_KEY]);
 
   useEffect(() => {
     if (searchTerm) {
