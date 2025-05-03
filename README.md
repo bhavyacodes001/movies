@@ -1,161 +1,46 @@
-# 🎬 MovieSearch App
+# Getting Started with Create React App
 
-A modern, responsive movie search application built with React, TypeScript, and Tailwind CSS. Search for movies, view details, and manage your favorites with a beautiful dark mode interface.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![MovieSearch App](https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80)
+## Available Scripts
 
-## ✨ Features
+In the project directory, you can run:
 
-- 🔍 Search movies and TV shows
-- 🎥 View detailed movie information
-- ⭐ Add movies to favorites
-- 🌙 Dark/Light mode toggle
-- 📱 Fully responsive design
-- 🎨 Modern UI with smooth animations
-- 📊 Movie recommendations
-- 🎞️ Trending series section
-- 📅 New releases section
-- ⭐ Top-rated movies section
+### `npm start`
 
-## 🛠️ Tech Stack
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- React 18
-- TypeScript
-- Tailwind CSS
-- Framer Motion (for animations)
-- React Router (for navigation)
-- Axios (for API calls)
-- Heroicons (for icons)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## 🚀 Getting Started
+### `npm test`
 
-### Prerequisites
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Node.js (v14 or higher)
-- npm or yarn
+### `npm run build`
 
-### Installation
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/movie-search-app.git
-cd movie-search-app
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. Install dependencies:
-```bash
-npm install
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3. Create a `.env` file in the root directory and add your OMDB API key:
-```env
-REACT_APP_OMDB_API_KEY=your_api_key_here
-```
+### `npm run eject`
 
-4. Start the development server:
-```bash
-npm start
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-The app will be available at `http://localhost:3000`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## 📦 Available Scripts
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## 🎨 Features in Detail
+## Learn More
 
-### Search Functionality
-- Search for movies and TV shows
-- Filter results by type (movie, series, episode)
-- Pagination support
-- Real-time search results
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Movie Details
-- Comprehensive movie information
-- IMDb rating
-- Plot summary
-- Cast and crew
-- Release date
-- Runtime
-- Genre information
-
-### Favorites Management
-- Add/remove movies to favorites
-- Persistent storage using localStorage
-- Easy access to favorite movies
-
-### UI/UX Features
-- Smooth animations and transitions
-- Responsive design for all devices
-- Dark/Light mode support
-- Loading states and error handling
-- Beautiful gradients and modern design
-
-## 🧩 Project Structure
-
-```
-movie-search-app/
-├── public/
-│   ├── index.html
-│   └── assets/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── SearchBar.tsx
-│   │   ├── MovieCard.tsx
-│   │   ├── Footer.tsx
-│   │   └── ...
-│   ├── pages/
-│   │   ├── Home.tsx
-│   │   ├── MovieDetails.tsx
-│   │   └── Favorites.tsx
-│   ├── App.tsx
-│   └── index.tsx
-├── package.json
-└── README.md
-```
-
-## 🔧 Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```env
-REACT_APP_OMDB_API_KEY=your_api_key_here
-```
-
-## 📱 Responsive Design
-
-The application is fully responsive and works on:
-- Mobile devices
-- Tablets
-- Desktop computers
-- Large screens
-
-## 🎯 Future Enhancements
-
-- [ ] User authentication
-- [ ] Watchlist feature
-- [ ] Movie reviews and ratings
-- [ ] Advanced filtering options
-- [ ] Movie recommendations based on favorites
-- [ ] Social sharing features
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-Created by **Bhavya code**
-
----
-
-Made with ❤️ using React, TypeScript, and Tailwind CSS 
+To learn React, check out the [React documentation](https://reactjs.org/).
