@@ -43,7 +43,7 @@ const MovieDetailsPage: React.FC = () => {
   const [error, setError] = useState('');
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const API_KEY = process.env.VITE_OMDB_API_KEY;
+  const API_KEY = '3c31fc0b';
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
