@@ -27,7 +27,7 @@ const Favorites: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+  const API_KEY = process.env.VITE_OMDB_API_KEY;
 
   useEffect(() => {
     const fetchFavoriteMovies = async () => {

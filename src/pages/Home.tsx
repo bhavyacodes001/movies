@@ -29,7 +29,7 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+  const API_KEY = process.env.VITE_OMDB_API_KEY;
   const ITEMS_PER_PAGE = 10;
 
   // Fetch recommended movies
