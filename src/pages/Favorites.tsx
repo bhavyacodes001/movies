@@ -58,7 +58,7 @@ const Favorites: React.FC = () => {
     };
 
     fetchFavoriteMovies();
-  }, []);
+  }, [API_KEY]);
 
   const getFavorites = () => JSON.parse(localStorage.getItem('favorites') || '[]');
   const isFavorite = (id: string) => getFavorites().includes(id);

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { HeartIcon as HeartIconOutline } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 
-interface MovieDetails {
+interface MovieDetailsData {
   Title: string;
   Year: string;
   Rated: string;
@@ -35,10 +35,10 @@ interface MovieDetails {
   Response: string;
 }
 
-const MovieDetails: React.FC = () => {
+const MovieDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [movie, setMovie] = useState<MovieDetails | null>(null);
+  const [movie, setMovie] = useState<MovieDetailsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [isFavorite, setIsFavorite] = useState(false);
@@ -68,7 +68,7 @@ const MovieDetails: React.FC = () => {
     };
 
     fetchMovieDetails();
-  }, [id]);
+  }, [id, API_KEY]);
 
   const toggleFavorite = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
@@ -176,4 +176,4 @@ const MovieDetails: React.FC = () => {
   );
 };
 
-export default MovieDetails; 
+export default MovieDetailsPage; 

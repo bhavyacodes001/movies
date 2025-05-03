@@ -16,17 +16,28 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
+  // Debounce utility function
+  const debounce = useCallback((func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return function (...args: any[]) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }, []);
+
   const debouncedSearch = useCallback(
     debounce((searchQuery: string) => {
       onSearch(searchQuery);
     }, debounceTime),
-    [onSearch, debounceTime]
+    [onSearch, debounceTime, debounce]
   );
 
   useEffect(() => {
     debouncedSearch(query);
     return () => {
-      debouncedSearch.cancel();
+      if (typeof debouncedSearch === 'function' && 'cancel' in debouncedSearch) {
+        (debouncedSearch as any).cancel();
+      }
     };
   }, [query, debouncedSearch]);
 
@@ -83,22 +94,5 @@ const SearchBar: React.FC<SearchBarProps> = ({
     </motion.div>
   );
 };
-
-// Debounce utility function
-function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): T & { cancel: () => void } {
-  let timeout: NodeJS.Timeout;
-
-  const debounced = function (...args: Parameters<T>) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  } as T;
-
-  (debounced as any).cancel = () => clearTimeout(timeout);
-
-  return debounced as T & { cancel: () => void };
-}
 
 export default React.memo(SearchBar); 

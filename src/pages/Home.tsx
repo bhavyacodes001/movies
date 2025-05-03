@@ -134,7 +134,7 @@ const Home: React.FC = () => {
     if (searchTerm) {
       searchMovies(currentPage);
     }
-  }, [searchTerm, type, currentPage]);
+  }, [searchTerm, type, currentPage, searchMovies]);
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
